@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <!-- Bootstrap core CSS -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- CSRF Token -->
@@ -22,45 +21,54 @@
           <a class="navbar-brand" href="http://localhost/fashionsaidlounnas/public/"><h1 style="color:#66EB9A;font-weight:bold;font-size:30px;">weFashion</h1></a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-item nav-link" href="/fashionsaidlounnas/public/soldes">SOLDES</a><span class="sr-only">(current)</span>
+             <a class="nav-item nav-link" href="{{ route('admin')}}">Products</a><span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
-                <a class="nav-item nav-link" href="/fashionsaidlounnas/public/men">MEN</a>
+              <a class="nav-item nav-link" href="{{ route('admins.category')}}">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-item nav-link" href="/fashionsaidlounnas/public/women">WOMEN</a>
+             <a class="nav-item nav-link" href="http://localhost/fashionsaidlounnas/public/">Shop</a>
             </li>
           </ul>
-          <ul class="navbar-nav ml-auto">
-            <!-- Authentication Links -->
-            @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-            @else
-                <li class="nav-item">
-                    <div class="nav-link">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
-            @endguest
-        </ul>
+ <ul class="navbar-nav ml-auto">
+    <!-- Authentication Links -->
+    @guest
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+        </li>
+    @else
+        <li class="nav-item">
+            <div class="nav-link">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+            </div>
+        </li>
+    @endguest
+</ul>
         </div>
       </nav>
 </header>
 <body>
-    <div style="width: 100%;margin: 0">@yield('contents')</div>
-        <div >
-            <footer class="text-center text-lg-start bg-light text-muted" style="background-color: #dae0e6!important;
-            width: 100%;" >
-                <!-- Section: Social media -->
+        @yield('content')
+        <div style="width: 100%;margin: 0">
+{{-- show pages --}}
+          <div class="">
+          @yield('main')
+         </div>
+        </div>
+        <div class="">
+            <footer class="text-center text-lg-start bg-light text-muted" style="
+background-color: #dae0e6!important;
+          position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;" >
                 <section
                   class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                   <div class="me-5 d-none d-lg-block">
