@@ -14,7 +14,7 @@
       </div>
       @endif
      {{-- form for create product --}}
-    <div class="container">
+    <div class="container" style="margin-bottom: 100px">
     <div class="">
 
             <form method="post" action="{{ route('admins.store') }}" enctype="multipart/form-data">
@@ -35,6 +35,7 @@
                     <input type="number" placeholder="Price" class="form-control" id="price" name="price" min="150" max="600.00" step="100.00"/>
                 </div>
                 <div class="form-group">
+                    <label for="size">Size : </label>
                     <select id="size" name='size'>
                     <option value="XS">XS</option>
                     <option value="S" selected>S</option>
@@ -44,18 +45,21 @@
                    </select>
                 </div>
                 <div class="form-group">
+                    <label for="status">Status : </label>
                     <select id="status" name="status">
                     <option value="0">non published</option>
                     <option value="1" selected>published</option>
                    </select>
                 </div>
                 <div class="form-group">
+                    <label for="state">State : </label>
                     <select id="state" name="state">
                     <option value="standard" selected>Standard</option>
                     <option value="solde">solde</option>
                    </select>
                 </div>
                 <div class="form-group">
+                    <label for="category">Category : </label>
                     <select id="category" name="category_id">
                       <option value="1">Men</option>
                       <option value="2">Women</option>

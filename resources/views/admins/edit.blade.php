@@ -14,7 +14,7 @@
         </div>
         <br />
         @endif
-        <div class="container">
+        <div class="container" style="margin-bottom: 200px">
         <div class="">
             <h2 style="text-align:center" class="display-4">Update Product</h2>
           <form class="" method="post" action="{{ route('admins.update', $editProduct->id) }}" enctype="multipart/form-data">
@@ -34,7 +34,7 @@
                   <input type="number" class="form-control" id="price" name="price" min="100.00" max="500.00" step="100.00" value="{{ $editProduct->price }} "/>
               </div>
              <div class="form-group">
-
+                <label for="Category">Category :</label>
                  <select id="category" name="category_id">
                    <option value="1">Men</option>
                    <option value="2">Women</option>
@@ -42,7 +42,7 @@
 
              </div>
               <div class="form-group">
-
+                <label for="state">State :</label>
                   <select id="state" name="state" >
                     <option value="solde"  @if($editProduct->state=="solde") selected @endif>Solde</option>
                     <option value="standard"  @if($editProduct->state=="standard") selected @endif>Standard</option>

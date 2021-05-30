@@ -21,7 +21,6 @@
         {{--  product solde--}}
 
         @elseif(Request::url() === 'http://localhost/fashionsaidlounnas/public/soldes')
-
         <h4  class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted" >Stock Product : Solde</span>
           <span class="badge badge-secondary badge-pill" >{{$countSolde}} {{'resultats'}}</span>
@@ -35,7 +34,6 @@
 
 
         {{-- display shop--}}
-
         <div class="row">
           @foreach($products as $product)
           <div class="col-md-4">
@@ -75,6 +73,9 @@
   <div>
   </div>
   <style>
+    a{
+          text-decoration: none !important;
+      }
     img {
       width: 480px;
       height: 450px;

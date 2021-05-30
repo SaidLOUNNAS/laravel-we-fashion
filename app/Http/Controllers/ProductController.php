@@ -49,7 +49,6 @@ class ProductController extends Controller
 
 
   // // product soldes
-
    public function ShowProductSolde(){
      $soldes=DB::table('Products')->where('state','=','solde')->orderBy('id','DESC')->paginate(6);
      $results=DB::table('Products')->where('state','=','solde');

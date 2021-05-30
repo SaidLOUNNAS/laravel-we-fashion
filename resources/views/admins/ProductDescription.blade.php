@@ -22,6 +22,9 @@
         -ms-user-select: none;
         user-select: none;
       }
+      a{
+          text-decoration: none !important;
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -75,9 +78,7 @@
         </div>
       </nav>
   <div class="py-5 text-center">
-
-    <h2>Product</h2>
-
+    <h2>Your Product</h2>
   </div>
 
 {{-- Description Product selected  --}}
@@ -165,7 +166,7 @@
             <button type="submit" class="btn btn-secondary">Buy</button>
       </form>
     </div>
-        <div class="col-md-8 order-md-1">
+        <div class="row col-md-7 order-md-1" style="margin-bottom:40px">
           <div class="card mb-4 shadow-sm">
              <a href="{{ route('admins.ProductDescription',$showProduct->id)}}">
 

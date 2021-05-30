@@ -33,9 +33,6 @@
  <ul class="navbar-nav ml-auto">
     <!-- Authentication Links -->
     @guest
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </li>
     @else
         <li class="nav-item">
             <div class="nav-link">
@@ -65,7 +62,6 @@
         <div class="">
             <footer class="text-center text-lg-start bg-light text-muted" style="
 background-color: #dae0e6!important;
-          position: fixed;
   top: auto;
   bottom: 0;
   width: 100%;" >

@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 
-    $factory->define(App\Produit::class, function (Faker $faker) {
+    $factory->define(App\Product::class, function (Faker $faker) {
 
         // upload pictures
 

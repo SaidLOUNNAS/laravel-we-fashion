@@ -12,7 +12,7 @@
     @endif
       </div>
      {{-- form product --}}
-    <div class="container">
+    <div class="container" style="margin-bottom: 300px">
     <div class="">
         <div style="margin-left:950px;">
             <a style="margin: 19px;" href="{{ route('admins.create')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Product</a>
@@ -55,7 +55,7 @@
   </div>
   {{-- form Category --}}
   @elseif(Request::url() === 'http://localhost/fashionsaidlounnas/public/category')
-  <div class="col-sm-12">
+  <div class="col-sm-12" style="margin-bottom: 300px">
       <h2 style="text-align:center" class="display-4">Categories</h2>
     <div style="margin-left:950px;">
       <a style="margin: 19px;" href="{{ route('admins.createCategory')}}" class="btn btn-primary"> <i class="fas fa-plus"></i> Category</a>

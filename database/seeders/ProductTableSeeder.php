@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class ProductTableSeeder extends Seeder
@@ -14,19 +16,18 @@ class ProductTableSeeder extends Seeder
     {
 
     //  create categories for men and women
-     \App\Models\Category::create([
+    Category::create([
         'name'=>'men',
-
       ]);
 
-      \App\Models\Category::create([
+    Category::create([
         'name'=>'women',
       ]);
 
     //   create 80 products
-      \App\Models\Product::factory()->count(30)->create()->each(function($produit){
+    Product::factory()->count(30)->create()->each(function($product){
 
-        $produit->save();
+        $product->save();
 
       });
 
